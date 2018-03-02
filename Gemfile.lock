@@ -160,6 +160,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  json (= 1.8.2)
   pg
   pry
   rails (= 4.2.1)
