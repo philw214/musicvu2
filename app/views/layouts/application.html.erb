@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>music.Vu</title>
+    <link id="css" rel="stylesheet" href="/assets/application.css" media="all" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/assets/jquery-ui.min.css" media="all" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.plyr.io/2.0.18/plyr.css">
+    <script src="https://cdn.plyr.io/2.0.18/plyr.js"></script>
+    <%= javascript_include_tag 'application', 'jquery-ui.min.js', 'jquery' 'data-turbolinks-track' => false %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <h1>music.Vu</h1>
+    </header>
+    <div id="main">
+    <%= render "layouts/player" %>
+    </div>
+  </body>
+</html>
