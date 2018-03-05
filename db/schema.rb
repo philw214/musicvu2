@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515154858) do
+ActiveRecord::Schema.define(version: 20180304205838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20150515154858) do
     t.string   "song"
     t.string   "album"
     t.string   "genre"
+    t.string   "rel_artist1"
+    t.string   "rel_artist2"
+    t.string   "rel_artist3"
   end
 
 end

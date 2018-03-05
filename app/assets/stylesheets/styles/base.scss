@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:500|Montserrat:700');
 
 
 h1,h2,h3,h4,li {
@@ -7,9 +7,15 @@ h1,h2,h3,h4,li {
   padding:0;
   width: 100%;
 }
-p {
+p,a {
   font-family: 'Lato', sans-serif;
   margin: 0 0 10px;
+  color: #333333;
+}
+.red-header {
+  font-size: 22px;
+  margin: 0 0 15px 0;
+  color: #b56357;
 }
 #main, header {
   max-width: 1550px;
@@ -26,7 +32,6 @@ header {
   }
 }
 img {
-  // vertical-align: middle;
   margin: 0 auto;
   width: 100%;
   height: 100%;

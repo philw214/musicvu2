@@ -2,17 +2,26 @@ $('document').ready(function() {
 
   // initialize stuff when you first hit the page
   function init() {
-    $(".artist-data.mini, #artist-bio, #artist-photo").removeClass("show");
     var thisArtist = "TIAAN";
     getArtistData(thisArtist);
     // handle slide animation
     $(".artist-data.slide").addClass("animate");
-    setTimeout(function(){ $(".artist-data.mini, #artist-bio, #artist-photo").addClass("show"); }, 3000);
+    setTimeout(function(){
+      $(".artist-data.mini, #artist-bio, #artist-photo").addClass("show");
+      $("#artist-photo").removeClass("hide");
+    }, 3000);
     setTimeout(function(){ $(".artist-data.slide").removeClass("animate"); }, 2300);
+
   }
 
   setTimeout(function(){ init(); }, 1500);
 
+  // disable link clicks
+  $("a").each(function() {
+    $(this).click(function(event){
+      event.preventDefault();
+    });
+  });
 
   var clicked = false;
   function clickToggle(){
@@ -63,11 +72,14 @@ $('document').ready(function() {
             // update player with new song
             audio.src = 'audios/' + response[i].audio_id;
             // update artist info to be shown
-            $('#artist-photo').attr('src', 'images/' +response[i].photo_url);
-            $('.artist-name').text(response[i].name);
-            $('.artist-song').text(response[i].song);
-            $('.artist-album').text(response[i].album);
-            $('#artist-bio').text(response[i].bio);
+            $("#artist-photo").attr('src', 'images/' +response[i].photo_url);
+            $(".artist-name").text(response[i].name);
+            $(".artist-song").text(response[i].song);
+            $(".artist-album").text(response[i].album);
+            $("#artist-bio").text(response[i].bio);
+            $("#rel_artist1").text(response[i].rel_artist1);
+            $("#rel_artist2").text(response[i].rel_artist2);
+            $("#rel_artist3").text(response[i].rel_artist3);
             // delay audio and viz for "cool" UX
             setTimeout(function(){ visualizer(); jsPlayer[0].play(); }, 1000);
           }

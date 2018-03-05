@@ -1,0 +1,15 @@
+@media (max-width:991px) {
+  img#artist-photo {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    transition-property: none;
+  }
+  .info {
+    height: auto;
+  }
+  .player-wrapper .inner .artist-playlist {
+    width: 100%;
+    padding-top: 40px;
+  }
+}
